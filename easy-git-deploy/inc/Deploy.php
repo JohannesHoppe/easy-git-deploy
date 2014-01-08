@@ -38,7 +38,7 @@ class Deploy extends VcsAbstract {
 				// normal run
 
 				// Move to master branch.
-				$this->exec_and_log('Switching to master branch.', 'git checkout master');
+				$this->exec_and_log('Switching to master branch.', 'git checkout ' . $this->_branch);
 
 				// Update the local repository
 				$this->exec_and_log('Pulling in changes.', 'git pull ' . $this->_remote . ' ' . $this->_branch);
