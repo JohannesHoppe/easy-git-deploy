@@ -25,8 +25,15 @@ class Pull extends VcsAbstract {
                 // 1. Move to master branch.
                 $this->exec_and_log('Switching to master branch.', 'git checkout ' . $this->_branch);
 
-                // 3. Update the local repository
+                // 2. Update the local repository
                 $this->exec_and_log('Pulling in changes.', 'git pull');
+
+                // hidden feature: checkout special revision
+
+                if (isset($_GET['hash']) && $this->is_sha1($_GET['hash'])) {
+                    $hash = $_GET['hash'];
+                    $this->exec_and_log('Checkout previous revision '. $hash.':', 'git checkout '. $hash);
+                }
             }
 
             // Secure the .git directory

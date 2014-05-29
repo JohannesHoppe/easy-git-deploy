@@ -116,4 +116,8 @@ abstract class VcsAbstract implements VcsInterface {
     protected function has_base_directory() {
         return file_exists($this->_directory);
     }
+
+    protected function is_sha1($str) {
+        return (bool) preg_match('/^[0-9a-f]{40}$/i', $str);
+    }
 }
