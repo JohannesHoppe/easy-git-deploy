@@ -1,5 +1,5 @@
 body {
-    heigth: 99%;
+    height: 100%;
 }
 
 .container {
@@ -10,6 +10,8 @@ body {
     
     margin-top: -300px;
     margin-left: -350px;
+
+    opacity: 0.8;
 }
 
 h1 {
@@ -49,4 +51,9 @@ h1 i {
 .jumbotron .btn small {
     display:block;
     font-size: 12px;
+}
+
+iframe {
+    width: 100%;
+    height: 99%;
 }

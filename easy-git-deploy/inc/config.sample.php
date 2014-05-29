@@ -11,7 +11,3 @@ $config = array(
 
     // Further options: 'log', 'date_format', 'branch', 'remote'
 );
-
-
-
-

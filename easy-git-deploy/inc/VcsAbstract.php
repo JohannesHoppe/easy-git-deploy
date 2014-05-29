@@ -2,13 +2,6 @@
 
 abstract class VcsAbstract implements VcsInterface {
     /**
-     * A callback function to call after the deploy has finished.
-     *
-     * @var callback
-     */
-    public $post_deploy;
-
-    /**
      * The name of the file that will be used for logging deployments. Set to
      * FALSE to disable logging.
      *
@@ -71,8 +64,6 @@ abstract class VcsAbstract implements VcsInterface {
                 $this->{'_' . $option} = $value;
             }
         }
-
-        $this->log('Attempting deployment...');
     }
 
     /**
@@ -102,6 +93,7 @@ abstract class VcsAbstract implements VcsInterface {
             file_put_contents($filename, $formatted, FILE_APPEND);
 
             $this->_log_messages .= $formatted;
+            $this->_log_messages .= "-------------------------------------------------------------------------------\n";
         }
     }
 
@@ -123,11 +115,5 @@ abstract class VcsAbstract implements VcsInterface {
      */
     protected function has_base_directory() {
         return file_exists($this->_directory);
-    }
-
-    protected function post_deploy() {
-        if (is_callable($this->post_deploy)) {
-            call_user_func($this->post_deploy);
-        }
     }
 }

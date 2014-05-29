@@ -1,6 +1,6 @@
 <?php
 
-class Commit extends VcsAbstract {
+class Push extends VcsAbstract {
     /**
      * Executes the necessary commands to commit website changes.
      */
@@ -37,10 +37,7 @@ class Commit extends VcsAbstract {
             // Push changes to remote repository.
             $this->exec_and_log('Pushing in changes.', 'git push ' . $this->_remote . ' ' . $branchName);
 
-            // Execute post deploy callback.
-            $this->post_deploy();
-
-            $this->log('Commit successful.');
+            $this->log('PUSH successful.');
         }
         catch (Exception $e) {
             $this->log($e, 'ERROR');
