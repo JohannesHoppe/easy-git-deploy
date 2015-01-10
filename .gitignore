@@ -2,3 +2,4 @@ easy-git-deploy/inc/config.php
 easy-git-deploy/inc/config.backup*
 .idea
 deployments.log
+*/.htaccess
