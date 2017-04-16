@@ -26,7 +26,7 @@ If there are any conflicting changes, the _PUSH_ button is here to rescue. It cr
 
 ## Licence
 
-The MIT License (MIT), Copyright (c) 2014 Johannes Hoppe  
+The MIT License (MIT), Copyright (c) 2017 Johannes Hoppe  
 see [License text](LICENSE)  
   
 Many thanks to Brandon Summers for the [initial code](http://brandonsummers.name/blog/2012/02/10/using-bitbucket-for-automated-deployments/).  
