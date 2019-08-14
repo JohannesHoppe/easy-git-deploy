@@ -5,7 +5,7 @@
 Tired of complex shell scripts for managing GIT on your web server?  
 This tool has exactly one button for each direction. That's all!
 
-EasyGitDeploy targets the following setup: Your are developing with git and remote repository (e.g. GitHub or BitBucket). To handle deployments for smaller projects (e.g. Static websites, Wordpress, etc.) you would like to deploy a branch directly to the webserver (by default 'master' is used). As soon as everything works as expected, you just have to use the _PULL_ button to either create a new git-driven directory on the webserver or to update the existing directory. This works as long as no file-changes were made on the webserver (e.g. automatic wordpress updates or uploaded user-content).
+EasyGitDeploy targets the following setup: Your are developing with git and remote repository (e.g. GitHub or BitBucket). To handle deployments for smaller projects (e.g. Static websites, **Angular apps, Wordpress**, etc.) you would like to deploy a branch directly to the webserver (by default 'master' is used). As soon as everything works as expected, you just have to use the _PULL_ button to either create a new git-driven directory on the webserver or to update the existing directory. This works as long as no file-changes were made on the webserver (e.g. automatic wordpress updates or uploaded user-content).
 
 If there are any conflicting changes, the _PUSH_ button is here to rescue. It creates a new branch and pushes the changes to the remote repository. Now it’s up to you to merge the new branch back to master. As soon as this was made, _PULL_ will work again and brings the project on the webserver back to the latest version.
 
